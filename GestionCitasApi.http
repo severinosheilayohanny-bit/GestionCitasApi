@@ -1,0 +1,26 @@
+@GestionCitasApi_HostAddress = http://localhost:5022
+
+### 1. Crear un Paciente
+POST {{GestionCitasApi_HostAddress}}/api/pacientes
+Content-Type: application/json
+
+{
+  "nombre": "Sheila Severino",
+  "telefono": "809-555-0101"
+}
+
+### 2. Ver Lista de Pacientes
+GET {{GestionCitasApi_HostAddress}}/api/pacientes
+
+### 3. Crear una Cita para el Paciente ID 1
+POST {{GestionCitasApi_HostAddress}}/api/citas
+Content-Type: application/json
+
+{
+  "fecha": "2026-10-15T09:00:00",
+  "motivo": "Consulta de Control",
+  "pacienteId": 1
+}
+
+### 4. Ver Lista de Citas
+GET {{GestionCitasApi_HostAddress}}/api/citas
